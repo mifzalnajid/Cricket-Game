@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cricket Game</title>
+</head>
+<style>
+    body {
+        text-align: center;
+    }
+
+    .button {
+        height: 2rem;
+        width: auto;
+    }
+</style>
+
+<body>
+    <h1>BAT BALL STUMP GAME</h1>
+
+    <button onclick="
+    computerchoice();
+    if(computerchoose==='ball'){
+        alert('Congratulations!! You  Won');
+    }
+    else if(computerchoose==='Stump'){
+        alert('Sorry! You Lose');
+    }
+    else{
+        alert('Match is Tie');
+    }
+    ">Bat</button>
+    <button onclick="
+        computerchoice();
+    if(computerchoose==='Bat'){
+        alert('Opps! You lose');
+    }
+    else if(computerchoose==='ball'){
+        alert('Match is Tie');
+    }
+    else{
+        alert('Congratulations! you Win');
+    }">Ball</button>
+    <button onclick="
+        computerchoice();
+    if(computerchoose==='Bat'){
+        alert('Opps! you lose');
+    }
+    else if(computerchoose==='ball'){
+        alert('Congratulations! you win');
+    }
+    else{
+        alert('Match is Tie');
+    }
+    ">Stump </button>
+</body>
+<script>
+    let computerchoose;
+    function computerchoice() {
+        let randomNumber = Math.random() * 3;
+        if (randomNumber > 0 && randomNumber <= 1) {
+            computerchoose = 'Bat';
+        }
+        else if (randomNumber > 1 && randomNumber <= 2) {
+            computerchoose = 'ball';
+        }
+        else {
+            computerchoose = 'Stump';
+        }
+    }
+
+</script>
+
+</html>
